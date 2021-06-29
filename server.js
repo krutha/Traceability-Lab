@@ -8,15 +8,18 @@ var   rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 app.use(express.json());
+app.use('/style', express.static('./public/styles.css'))
 //rollbar.log('this is tarceability')
-app.get('/', function(req, res) {
-    // rollbar.log('hello world');
-    //rollbar.error('link broken');//
-    rollbar.info('html file served successfully');
-    rollbar.critical("Crash the server");
-    res.sendFile(path.join(__dirname, '/public/index.html')) //res is a built in body, sendfile being a build in method to send back a file at a specific path
-    res.sendFile(path.join(__dirname, '/public/broken.html'))//path.join - join the location of index.html to the current directory
- }); //__dirname - always the first argument of the directory at this location (monitoring-interactive)
+// app.get('/', function(req, res) {
+//     // rollbar.log('hello world');
+//     //rollbar.error('link broken');//
+//     rollbar.info('html file served successfully');
+//     rollbar.critical("Crash the server");
+//     res.sendFile(path.join(__dirname, '/public/index.html')) //res is a built in body, sendfile being a build in method to send back a file at a specific path
+//     res.sendFile(path.join(__dirname, '/public/broken.html'))//path.join - join the location of index.html to the current directory
+//  }); //__dirname - always the first argument of the directory at this location (monitoring-interactive)
+
+
 let students = [] // we'll hold any students added here
 
 app.get('/', (req, res) => {
@@ -57,4 +60,4 @@ app.post('/api/student', (req, res) => {
 const port = process.env.PORT || 4413;
 app.listen(port, function() {
     console.log(`Server is live on ${port}`)
-});
+})
