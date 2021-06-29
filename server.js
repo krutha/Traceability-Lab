@@ -8,10 +8,10 @@ var   rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 app.use(express.json());
-rollbar.log('this is tarceability')
+//rollbar.log('this is tarceability')
 
 app.get('/', function(req, res) {
-    rollbar.log('hello world');
+    // rollbar.log('hello world');
     //rollbar.error('link broken');//
     rollbar.info('html file served successfully');
     rollbar.critical("Crash the server");
