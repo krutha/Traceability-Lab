@@ -11,15 +11,18 @@
 <body>
     <h1> Monitoring & Traceability</h1>
      <form>
+         <div id ="critical" onclick="location='./critical'">critical</div>
+         <br><br>
         <input type="text" placeholder="type name here..."/>
         <button>add student</button>
+        
     </form>
     <section></section>
     <script>
         const addForm = document.querySelector('form')
         const nameInput = document.querySelector('input')
         const container = document.querySelector('section')
-
+        
         function submitHandler(e) {
             e.preventDefault()
             axios.post('/api/student', {name: nameInput.value})
