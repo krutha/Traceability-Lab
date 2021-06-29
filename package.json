@@ -1,26 +1,26 @@
 {
   "name": "traceability",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "expres": "0.0.5",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/krutha/Traceability-Lab.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/krutha/Traceability-Lab/issues"
   },
-  "homepage": "https://github.com/krutha/Traceability-Lab#readme",
-  "description": ""
+  "homepage": "https://github.com/krutha/Traceability-Lab#readme"
 }

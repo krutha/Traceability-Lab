@@ -15,6 +15,6 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname,'/public/index.html'))
 })
 const port = process.env.PORT || 4444;
-app.listen(port,function(){ 
+app.listen(port, function(){ 
     console.log(`server running on ${port}`)
 })
