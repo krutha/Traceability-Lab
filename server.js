@@ -7,7 +7,7 @@ var   rollbar = new Rollbar({
   captureUncaught: true,
   captureUnhandledRejections: true
 });
-app.use(express.json());
+app.use(express.json())
 app.use('/style', express.static('./public/styles.css'))
 //rollbar.log('this is tarceability')
 // app.get('/', function(req, res) {
@@ -58,6 +58,7 @@ app.post('/api/student', (req, res) => {
 
 
 const port = process.env.PORT || 4413;
+app.use(rollbar.errorHandler())
 app.listen(port, function() {
     console.log(`Server is live on ${port}`)
 })
